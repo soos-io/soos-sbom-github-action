@@ -26,4 +26,4 @@ PARAMS=(
 
 PARAMS_STRING="${PARAMS[@]}"
 
-node soos-sbom "${SOOS_SBOM_PATH}" ${PARAMS_STRING}
+soos-sbom "${SOOS_SBOM_PATH}" ${PARAMS_STRING}
