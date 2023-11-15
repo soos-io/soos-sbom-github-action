@@ -44,7 +44,7 @@ inputs:
     required: true
     default: ${{ github.repository }}
   sbom_path:
-    description: "The SBOM File to scan, it could be the location of the file or the file itself. When location is specified only the first file found will be scanned."
+    description: "The SBOM File to scan, it could be the location of the file or the file itself. When location is specified only the first file found will be scanned. When this parameter is specified it should be indicated relative to the repository (eg: sboms/your_sbom.cdx.json)"
     required: true
     default: ''
   verbose: 
