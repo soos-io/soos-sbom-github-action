@@ -1,4 +1,4 @@
-FROM node:16-slim as BASE
+FROM node:18-slim as BASE
 
 RUN npm i -g @soos-io/soos-sbom
 
