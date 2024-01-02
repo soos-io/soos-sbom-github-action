@@ -25,8 +25,9 @@ PARAMS=(
     "--integrationName ${SOOS_INTEGRATION_NAME}"
     "--integrationType ${SOOS_INTEGRATION_TYPE}"
     "--projectName ${SOOS_PROJECT_NAME}"
-    ${SOOS_VERBOSE:+--verbose}
 )
+
+[ "$SOOS_VERBOSE" == "true" ] && PARAMS+=("--verbose")
 
 PARAMS_STRING="${PARAMS[@]}"
 
