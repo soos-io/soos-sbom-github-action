@@ -31,6 +31,12 @@ inputs:
   client_id:
     description: 'SOOS Client ID.'
     required: true
+  directories_to_exclude:
+    description: 'Directories to Exclude: Listing of directories (relative to ./) to exclude from the search for SBOM files. Example - Correct: bin/start/  Example - Incorrect: ./bin/start/ Example - Incorrect: /bin/start'
+    required: false
+  files_to_exclude:
+    description: 'Files to Exclude: Listing of files (relative to ./) to exclude from the search for SBOM files. Example - Correct: bin/start/internal.spdx.json ... Example - Incorrect: ./bin/start/internal.spdx.json ... Example - Incorrect: /bin/start/internal.spdx.json'
+    required: false
   log_level:
     description: 'Log level to show: DEBUG, INFO, WARN, FAIL, ERROR.'
     required: false
