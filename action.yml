@@ -31,6 +31,12 @@ inputs:
   client_id:
     description: 'SOOS Client ID.'
     required: true
+  directories_to_exclude:
+    description: 'Directories to Exclude: Listing of directories (relative to ./) to exclude from the search for SBOM files. Example - Correct: bin/start/  Example - Incorrect: ./bin/start/ Example - Incorrect: /bin/start'
+    required: false
+  files_to_exclude:
+    description: 'Files to Exclude: Listing of files (relative to ./) to exclude from the search for SBOM files. Example - Correct: bin/start/internal.spdx.json ... Example - Incorrect: ./bin/start/internal.spdx.json ... Example - Incorrect: /bin/start/internal.spdx.json'
+    required: false
   log_level:
     description: 'Log level to show: DEBUG, INFO, WARN, FAIL, ERROR.'
     required: false
@@ -48,7 +54,7 @@ inputs:
     required: true
     default: ${{ github.repository }}
   sbom_path:
-    description: "The SBOM File to scan, it could be the location of the file or the file itself. When location is specified only the first file found will be scanned. When this parameter is specified it should be indicated relative to the repository (eg: sboms/your_sbom.cdx.json)"
+    description: "The SBOM file or folder to scan. When a folder is specified all SBOMs found in the folder and sub-folders will be scanned. When this parameter is specified it should be indicated relative to the repository (eg: sboms/your_sbom.cdx.json)"
     required: true
     default: ''
   sbom_version:

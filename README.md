@@ -43,7 +43,9 @@ jobs:
 | build_uri              | [none]                       | URI to CI build info.                                                                                                        |
 | build_version          | [none]                       | Version of application build artifacts.                                                                                      |
 | client_id              | [none]                       | The Client Id provided to you when subscribing to SOOS services.                                                             |
+| directories_to_exclude | `**/node_modules/**, "**/bin/**", "**/obj/**", "**/lib/**` | Listing of directories or patterns to exclude from the search for SBOM files. eg: **bin/start/**, **/start/** |
+| files_to_exclude       | [none]                       | Listing of files or patterns patterns to exclude from the search for SBOM files. eg: **/int**.spdx.json/, **/internal.spdx.json |
 | log_level              | 'INFO'                       | Log level to show: DEBUG, INFO, WARN, FAIL, ERROR.                                                                           |
-| operating_environment  | ${{ runner.os }}             | System info regarding operating system, etc.                                                                                 |
-| project_name           | ${{ github.repository }}     | The project name that will be displayed on the dashboard. By Default is owner/repository_name.                               |
-| sbom_path              | [none]                       | The SBOM File to scan, it could be the location of the file or the file itself. When location is specified only the first file found will be scanned. When this parameter is specified it should be indicated relative to the repository (eg: sboms/your_sbom.cdx.json)                          |
+| operating_environment | ${{ runner.os }}             | System info regarding operating system, etc.                                                                                  |
+| project_name          | ${{ github.repository }}     | The project name that will be displayed on the dashboard. By Default is owner/repository_name.                                |
+| sbom_path             | [none]                       | The SBOM file or folder to scan. When a folder is specified all SBOMs found in the folder and sub-folders will be scanned. When this parameter is specified it should be indicated relative to the repository (eg: sboms/your_sbom.cdx.json) |
