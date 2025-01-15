@@ -44,6 +44,8 @@ jobs:
 | build_version          | [none]                       | Version of application build artifacts.                                                                                      |
 | client_id              | [none]                       | The Client Id provided to you when subscribing to SOOS services.                                                             |
 | directories_to_exclude | `**/node_modules/**, "**/bin/**", "**/obj/**", "**/lib/**` | Listing of directories or patterns to exclude from the search for SBOM files. eg: **bin/start/**, **/start/** |
+| export_format          | [none]                       | Write the scan result to this file format. Options: CsafVex, CycloneDx, Sarif, Spdx, SoosIssues, SoosLicenses, SoosPackages, SoosVulnerabilities |
+| export_file_type       | [none]                       | Write the scan result to this file type (when used with exportFormat). Options: Csv, Html, Json, Text, Xml                                       |
 | files_to_exclude       | [none]                       | Listing of files or patterns patterns to exclude from the search for SBOM files. eg: **/int**.spdx.json/, **/internal.spdx.json |
 | log_level              | 'INFO'                       | Log level to show: DEBUG, INFO, WARN, FAIL, ERROR.                                                                           |
 | operating_environment | ${{ runner.os }}             | System info regarding operating system, etc.                                                                                  |
